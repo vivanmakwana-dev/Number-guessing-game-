@@ -7,7 +7,6 @@ A simple Python game where the computer selects a random number and the player h
 ## 🧩 How it works
 - The computer generates a random number
 - You guess the number
-- It tells you if your guess is too high or too low
 - You keep guessing until you win
 
 ---
