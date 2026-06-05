@@ -21,11 +21,11 @@ while True:
     try:
         guess = int(input("Guess a number between 1 and 50: "))
     except ValueError:
-        print("Enter a valid number!")
+        print("Are you a donkey ? Enter a valid number you stupid.")
         continue
 
     if not 1 <= guess <= 50:
-        print("Number must be between 1 and 50.")
+        print("are you blind or what? Don't you see that number must be  between 1 and 50 ")
         continue
 
     tries += 1
@@ -41,3 +41,4 @@ while True:
         tries +=1
         print(" Finally you guessed correct number!!Huh it was your luck brat")
         print(f"Literally you took {tries} attempts such a loser!") 
+        break
