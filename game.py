@@ -3,7 +3,7 @@
 import random
 
 number = random.randint(1,50)
-
+tries = 0
 low_messages = [ 
     "You are such great loser huh?" ,
     "Skill issue detected",
@@ -18,11 +18,26 @@ high_messages = ["Too high ! Try again.",
                  "You donkey!!!"
 ]
 while True:
-    guess = int(input("Guess your number between 1 and 50 :-"))
+    try:
+        guess = int(input("Guess a number between 1 and 50: "))
+    except ValueError:
+        print("Enter a valid number!")
+        continue
+
+    if not 1 <= guess <= 50:
+        print("Number must be between 1 and 50.")
+        continue
+
+    tries += 1
+    
      
     if guess < number:
+        tries +=1
         print(random.choice(low_messages))
     elif guess > number:
+        tries +=1
         print(random.choice(high_messages))
     else:
+        tries +=1
         print(" Finally you guessed correct number!!Huh it was your luck brat")
+        print(f"Literally you took {tries} attempts such a loser!") 
